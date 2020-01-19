@@ -44,6 +44,22 @@ int main(void)
 	int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
 	size_t n = sizeof(array) / sizeof(array[0]);
 
+	list = NULL;
+	print_list(list);
+	printf("!--\n");
+	insertion_sort_list(NULL);
+	printf("-+-\n");
+	print_list(list);
+	printf("--!\n");
+
+	list = NULL;
+	print_list(list);
+	printf("!--\n");
+	insertion_sort_list(&list);
+	printf("-+-\n");
+	print_list(list);
+	printf("--!\n");
+
 	list = create_listint(array, n);
 	if (!list)
 		return (1);
